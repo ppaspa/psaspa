@@ -1,4 +1,4 @@
-# bird-aspa-prefix
+# ppaspa
 
 BIRD-based ASPA experiments with prefix-granular authorization and benchmark automation.
 
@@ -25,7 +25,6 @@ Physical directories:
 - `campaigns/`: retained campaign definitions
 - `results/`: retained result directories
 - `tools/`: Route Views analysis scripts
-- `texto/`: paper sources
 
 ## Implementation
 
@@ -52,16 +51,12 @@ Prefix-aware selection is applied only at the origin side of ASPA validation.
 - `curl`
 - `bgpdump` for the Route Views scripts
 
-Run from the repository root:
-
-```bash
-cd /bird-prefix
-```
-
 Run commands from the repository root.
 
-The benchmark runner rebuilds each BIRD tree inside its Docker container when needed.
-You dont need to run the build commands manually on the host.
+## Build
+
+The benchmark runner rebuilds the BIRD trees inside Docker when needed.
+You dnot need to run the build commands manually on the host.
 
 Inside the containers, the rebuild uses:
 
