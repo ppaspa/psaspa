@@ -1,0 +1,115 @@
+{
+  "campaign": {
+    "name": "synthetic-rules-10k-main",
+    "description": "Campanha sintetica principal de variacao do numero de regras prefixadas com 10 mil rotas e diversidades controladas, comparando linear, trie e hybridv2 contra o baseline global.",
+    "target": "linear+trie+hybridv2",
+    "mode": "global+hit+miss",
+    "warmup_repeats": 2,
+    "measured_repeats": 10,
+    "rebuild_once": true,
+    "write_logs": false,
+    "runner_mode": "batched-per-project",
+    "order_strategy": "rotate-projects",
+    "matrix": {
+      "routes": [
+        10000
+      ],
+      "path_len": [
+        4
+      ],
+      "providers_per_rule": [
+        10
+      ],
+      "prefix_rules": [
+        2,
+        4,
+        8,
+        16,
+        24,
+        32,
+        48,
+        64,
+        96,
+        128,
+        192,
+        256,
+        384,
+        512,
+        768,
+        1024
+      ],
+      "origin_diversity_pct": [
+        0,
+        50
+      ]
+    },
+    "_path": "campaigns/synthetic-rules-10k-main.json"
+  },
+  "output_dir": "results/synthetic-rules-10k-main-linux-rules-main",
+  "measured_points": 32,
+  "measured_repeats": 10,
+  "warmup_repeats": 2,
+  "rebuild_once": false,
+  "runner_mode": "batched-per-project",
+  "order_strategy": "rotate-projects",
+  "host": {
+    "hostname": "benchmark-host",
+    "platform": "Linux-6.12.86+deb13-amd64-x86_64-with-glibc2.41",
+    "system": "Linux",
+    "release": "6.12.86+deb13-amd64",
+    "version": "#1 SMP PREEMPT_DYNAMIC Debian 6.12.86-1 (2026-05-08)",
+    "machine": "x86_64",
+    "processor": "",
+    "cpu_count": 12,
+    "python": "3.13.5 (main, May  5 2026, 21:05:52) [GCC 14.2.0]",
+    "timestamp": "2026-05-22T00:31:13.938398",
+    "cwd": ".",
+    "docker": {
+      "docker_client_version": "26.1.5+dfsg1",
+      "docker_server_version": "26.1.5+dfsg1",
+      "docker_compose_version": "2.26.1-4"
+    },
+    "linux": {
+      "cpu_governors": null,
+      "irqbalance_active": null,
+      "bench_cpuset_cpus": null,
+      "bench_cpuset_mems": null,
+      "housekeeping_cpuset_cpus": null,
+      "clocksource": "kvm-clock"
+    },
+    "projects": {
+      "bird": {
+        "repo": "bird",
+        "git_head": null,
+        "git_status_short": "",
+        "source_fingerprint_sha256": "5f1a8c12ca05e1070a7dbab85f54624dd03dd9587cc92a8a57035ffbc7f37e06"
+      },
+      "linear": {
+        "repo": "linear",
+        "git_head": null,
+        "git_status_short": "",
+        "source_fingerprint_sha256": "d031817eef098f5946fa4cd9ae744e447ca28d9761022486ffa06dd3dabb623e"
+      },
+      "bird-prefix-trie": {
+        "repo": "bird-prefix-trie",
+        "git_head": null,
+        "git_status_short": "",
+        "source_fingerprint_sha256": "e069b7907c76e810d3db390423ec8dc2150a40eb6524c330858bc6a7d1862225"
+      },
+      "bird-prefix-hybrid": {
+        "repo": "bird-prefix-hybrid",
+        "git_head": null,
+        "git_status_short": "",
+        "source_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "bird-prefix-hybridv2": {
+        "repo": "bird-prefix-hybridv2",
+        "git_head": null,
+        "git_status_short": "",
+        "source_fingerprint_sha256": "789e653189df2d680e94331bd3ec9e0a2542b88114ada055ba8325742aff373e"
+      }
+    }
+  },
+  "status": "completed",
+  "completed_points": 32
+}

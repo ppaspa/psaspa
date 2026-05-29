@@ -1,0 +1,4 @@
+#!/bin/sh
+
+echo "local-only workspace: release helper disabled" >&2
+exit 0

@@ -1,0 +1,8 @@
+#!/bin/sh
+
+set -e
+
+toplevel="$(readlink -f $(dirname $0)/../)"
+RELEASE_VERSION=$(cat "$toplevel/VERSION")
+echo $RELEASE_VERSION
+exit 0

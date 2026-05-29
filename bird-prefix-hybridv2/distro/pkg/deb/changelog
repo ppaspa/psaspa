@@ -1,0 +1,5 @@
+bird2 ({{ version }}-cznic.{{ release }}) unstable; urgency=medium
+
+  * upstream package
+
+ -- Maria Matějka <maria.matejka@nic.cz>  {{ now }}

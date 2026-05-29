@@ -1,0 +1,10 @@
+services:
+  bird-prefix-hybridv2:
+    build: .
+    container_name: bird-prefix-hybridv2
+    volumes:
+      - ..:/bird-source
+      - ./bird/test_prefix.conf:/bird-source/lab/bird/bird.conf:ro
+    network_mode: bridge
+    stdin_open: true
+    tty: true

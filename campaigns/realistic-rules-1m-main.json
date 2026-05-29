@@ -1,0 +1,37 @@
+{
+  "name": "realistic-rules-1m-main",
+  "description": "Main realistic campaign with 1 million routes, path length 4, 1% and 2% origin diversity, and variation in the number of prefix rules per origin, comparing linear, trie, and hybridv2 against the global baseline.",
+  "target": "linear+trie+hybridv2",
+  "mode": "global+hit+miss",
+  "warmup_repeats": 2,
+  "measured_repeats": 10,
+  "rebuild_once": true,
+  "write_logs": false,
+  "runner_mode": "batched-per-project",
+  "order_strategy": "rotate-projects",
+  "matrix": {
+    "routes": [
+      1000000
+    ],
+    "path_len": [
+      4
+    ],
+    "providers_per_rule": [
+      10
+    ],
+    "prefix_rules_per_origin": [
+      2,
+      4,
+      6,
+      8,
+      10,
+      12,
+      14,
+      16
+    ],
+    "origin_diversity_pct": [
+      1,
+      2
+    ]
+  }
+}

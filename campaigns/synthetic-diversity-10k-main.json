@@ -1,0 +1,39 @@
+{
+  "name": "synthetic-diversity-10k-main",
+  "description": "Main synthetic origin-diversity campaign with 10 thousand routes, comparing the global baseline with the linear, trie, and hybridv2 variants in the global, hit, and miss scenarios.",
+  "target": "linear+trie+hybridv2",
+  "mode": "global+hit+miss",
+  "warmup_repeats": 2,
+  "measured_repeats": 10,
+  "rebuild_once": true,
+  "write_logs": false,
+  "runner_mode": "batched-per-project",
+  "order_strategy": "rotate-projects",
+  "matrix": {
+    "routes": [
+      10000
+    ],
+    "path_len": [
+      4
+    ],
+    "providers_per_rule": [
+      10
+    ],
+    "prefix_rules": [
+      64
+    ],
+    "origin_diversity_pct": [
+      0,
+      10,
+      20,
+      30,
+      40,
+      50,
+      60,
+      70,
+      80,
+      90,
+      100
+    ]
+  }
+}

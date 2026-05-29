@@ -1,0 +1,10 @@
+services:
+  bird-original:
+    build: .
+    container_name: bird-original
+    volumes:
+      - ..:/bird-source
+      - ./bird/bird.conf:/bird-source/lab/bird/bird.conf:ro
+    network_mode: bridge
+    stdin_open: true
+    tty: true
