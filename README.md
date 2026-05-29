@@ -58,12 +58,12 @@ Run from the repository root:
 cd /bird-prefix
 ```
 
-## Build
+Run commands from the repository root.
 
-The benchmark runner rebuilds the BIRD trees inside Docker when needed.
+The benchmark runner rebuilds each BIRD tree inside its Docker container when needed.
+You dont need to run the build commands manually on the host.
 
-
-The build steps used inside the containers are:
+Inside the containers, the rebuild uses:
 
 ```bash
 autoreconf -fi
